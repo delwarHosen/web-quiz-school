@@ -1,12 +1,22 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import ShowQuizOPtion from '../ShowQuizOPtion/ShowQuizOPtion';
 
 const ShowQuizeDetails = () => {
     const data = useLoaderData();
-    console.log(data)
+    const questionAndOptions = data.data.questions;
+    // console.log(data.data.questions)
     return (
         <div>
-            <h3>hello</h3>
+            <h3>Quiz Of {questionAndOptions.name}</h3>
+            <h4>Total Question {questionAndOptions.total}</h4>
+            {
+
+                questionAndOptions.map(questionAndOption => <ShowQuizOPtion
+                    key={questionAndOption.id}
+                    questionAndOption={questionAndOption}
+                ></ShowQuizOPtion>)
+            }
         </div>
     );
 };
