@@ -7,6 +7,7 @@ import Main from './components/Main/Main.jsx'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Home from './components/Home/Home.jsx'
 import ShowQuizeDetails from './components/ShowQuizeDetails/ShowQuizeDetails'
+import Statistics from './components/Statistics/Statistics'
 
 const router = createBrowserRouter([
   {
@@ -21,8 +22,12 @@ const router = createBrowserRouter([
       {
         path: '/quiz/:quizId',
         loader: ({ params }) => fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizId}`),
-        element: <ShowQuizeDetails></ShowQuizeDetails>,
-
+        element: <ShowQuizeDetails></ShowQuizeDetails>
+      },
+      {
+        path: '/statistic',
+        element: <Statistics></Statistics>,
+        loader: () => fetch('https://openapi.programming-hero.com/api/quiz')
       }
     ]
   }

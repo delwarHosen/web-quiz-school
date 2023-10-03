@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 const ShowQuize = ({ showQuizType }) => {
     const { logo, name, id } = showQuizType;
+    // console.log(showQuizType)
     const navigate = useNavigate()
     const handleShowQuiz = () => {
         navigate(`/quiz/${id}`)
