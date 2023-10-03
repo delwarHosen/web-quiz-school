@@ -6,7 +6,7 @@ const Home = () => {
     const showQuizTypes = quizes.data;
     // console.log(showQuizTypes)
     return (
-        <div className='grid grid-cols-2 gap-4 w-[600px] h-[300px] mx-auto mt-2 mb-20'>
+        <div className='grid sm:grid-cols-2 gap-y-10 mt-2 mb-20'>
             {
                 showQuizTypes.map(showQuizType => <ShowQuize
                     key={showQuizType.id}

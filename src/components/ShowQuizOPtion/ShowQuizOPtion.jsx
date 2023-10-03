@@ -4,8 +4,6 @@ import { EyeIcon } from '@heroicons/react/24/solid'
 
 
 const ShowQuizOPtion = ({ questionAndOption }) => {
-    // console.log(questionAndOption.options)
-    // console.log(questionAndOption)
     const { question, options, correctAnswer } = questionAndOption;
     // console.log(options)
 
@@ -28,15 +26,16 @@ const ShowQuizOPtion = ({ questionAndOption }) => {
     }
 
     return (
-        <div className='border m-auto p-10 my-6 w-2/3'>
+        <div className='border rounded m-auto p-10 my-6 sm:w-10/12 bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 shadow'>
             <div className="flex justify-between">
-                <h2>{question}</h2>
-                <EyeIcon onClick={handleCorrectAnsShow} className="h-6 w-6 text-blue-500" />
+                <h2 className='font-serif text-sm font-semibold mt-4 text-white'>{question}</h2>
+                <EyeIcon onClick={handleCorrectAnsShow} className="h-6 w-6 text-white" />
             </div>
-            <div className='mt-6'>
+            <div className='mt-6 grid sm:grid-cols-2'>
                 {
                     options.map(option => <div key={option.id} >
-                        <p onClick={() => handleCorrectAns(option)}><input type="radio" value="Male" name="gender" />{option}</p>
+                        <p className='font-serif font-bold mt-2 text-white m-4' onClick={() =>
+                            handleCorrectAns(option)}><input type="checkbox" value="Male" name="gender" />{option}</p>
                     </div>)
                 }
             </div>

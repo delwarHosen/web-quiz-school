@@ -8,8 +8,8 @@ const ShowQuizeDetails = () => {
     // console.log(questionAndOptions)
     return (
         <div>
-            <h3>Quiz Of {data.data.name}</h3>
-            <h4>Total Question {data.data.total}</h4>
+            <h3 className='text-center font-serif text-2xl font-bold mt-4 text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900'>Quiz Name: {data.data.name}</h3>
+            <h4 className='text-center font-serif text-2xl font-bold mt-4 text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900'>Total Question: {data.data.total}</h4>
             {
 
                 questionAndOptions.map(questionAndOption => <ShowQuizOPtion

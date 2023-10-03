@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
     const [navbar, setNavbar] = useState(false);
     return (
-        <nav className="w-full bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 shadow">
+        <nav className="w-full sticky top-0 bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 shadow">
             <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
                 <div>
                     <div className="flex items-center justify-between py-3 md:py-5 md:block">
@@ -59,7 +59,7 @@ const Header = () => {
                                 <Link className='text-white hover:text-blue-600 font-sans font-semibold' to="/">Home</Link>
                             </li>
                             <li>
-                                <Link className='text-white hover:text-blue-600 font-sans font-semibold' to="">Quiz</Link>
+                                <Link className='text-white hover:text-blue-600 font-sans font-semibold' to="/">Quiz</Link>
                             </li>
                             <li >
                                 <Link className='text-white hover:text-blue-600 font-sans font-semibold' to="/statistic">Statistic</Link>
