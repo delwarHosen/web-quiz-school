@@ -55,17 +55,17 @@ const Header = () => {
                             }`}
                     >
                         <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-                            <li className="text-gray-600 hover:text-blue-600">
-                                <Link className='text-white font-sans font-semibold' to="/">Home</Link>
+                            <li>
+                                <Link className='text-white hover:text-blue-600 font-sans font-semibold' to="/">Home</Link>
                             </li>
-                            <li className="text-gray-600 hover:text-blue-600">
-                                <Link className='text-white font-sans font-semibold' to="">Quiz</Link>
+                            <li>
+                                <Link className='text-white hover:text-blue-600 font-sans font-semibold' to="">Quiz</Link>
                             </li>
-                            <li className="text-gray-600 hover:text-blue-600">
-                                <Link className='text-white font-sans font-semibold' to="/statistic">Statistic</Link>
+                            <li >
+                                <Link className='text-white hover:text-blue-600 font-sans font-semibold' to="/statistic">Statistic</Link>
                             </li>
-                            <li className="text-gray-600 hover:text-blue-600">
-                                <Link className='text-white font-sans font-semibold' to="javascript:void(0)">Contact US</Link>
+                            <li>
+                                <Link className='text-white hover:text-blue-600 font-sans font-semibold' to="javascript:void(0)">Contact US</Link>
                             </li>
                         </ul>
                     </div>
