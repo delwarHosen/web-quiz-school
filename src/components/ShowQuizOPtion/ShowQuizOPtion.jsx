@@ -35,7 +35,7 @@ const ShowQuizOPtion = ({ questionAndOption }) => {
                 {
                     options.map(option => <div key={option.id} >
                         <p className='font-serif font-bold mt-2 text-white m-4' onClick={() =>
-                            handleCorrectAns(option)}><input type="checkbox" value="Male" name="gender" />{option}</p>
+                            handleCorrectAns(option)}><input type="radio" value="Male" name="gender" />{option}</p>
                     </div>)
                 }
             </div>
